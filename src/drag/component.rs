@@ -5,4 +5,3 @@ pub struct Draggable;
 
 #[derive(Component)]
 pub struct IsDragging;
-

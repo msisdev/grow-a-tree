@@ -7,7 +7,7 @@ pub struct Pot;
 
 #[derive(Bundle)]
 pub struct PotBundle {
-    pub pot: Pot,
+	pub pot: Pot,
     
 	pub transform: Transform,
 	pub global_transform: GlobalTransform,
