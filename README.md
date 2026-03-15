@@ -1,8 +1,13 @@
 # grow-a-tree
 
+## Theme
+
+growing
+
 ## Design
 
-Pour water 10 times to win the game.
+Pour water 20 times to win the game.
+
 0. two-leaf shoot (1)
 1. .
 2. .
@@ -24,4 +29,3 @@ Pour water 10 times to win the game.
 18. .
 19. .
 20. forest
-192

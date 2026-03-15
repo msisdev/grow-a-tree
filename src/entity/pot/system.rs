@@ -13,7 +13,16 @@ pub fn load(
 		texture,
 		TextureAtlas {
 			layout: texture_atlas_layouts.add(config::asset::default_layout()),
-			index: 0,
+			index: config::sprite::DEFAULT,
 		},
 	);
+
+	commands.spawn(component::PotBundle {
+		pot: component::Pot,
+		transform: Transform::default(),
+		global_transform: GlobalTransform::default(),
+		visibility: Visibility::Visible,
+		sprite,
+		animation: config::animate::default_animation(),
+	});
 }

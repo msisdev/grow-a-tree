@@ -1,5 +1,7 @@
 use bevy::prelude::*;
 
+use crate::animate::Animation;
+
 #[derive(Component)]
 pub struct Pot;
 
@@ -12,5 +14,5 @@ pub struct PotBundle {
 
 	pub visibility: Visibility,
 	pub sprite: Sprite,
-
+	pub animation: Animation,
 }

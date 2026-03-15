@@ -56,8 +56,11 @@ impl AnimationLayerState {
             AnimationLayer::Sequence(s) => Self::Sequence {
                 current_sequence_index: 0,
                 timer: Timer::new(
-                    s.sequences.first().map(|(_, d)| *d).unwrap_or(Duration::ZERO),
-                    TimerMode::Once, // Sequence timers usually need repeating/updating dynamically
+                    s.sequences
+						.first()
+						.map(|(_, d)| *d)
+						.unwrap_or(Duration::ZERO),
+                    TimerMode::Once,
                 ),
             },
         }
