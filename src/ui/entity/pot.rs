@@ -1,6 +1,6 @@
 use bevy::prelude::*;
 
-use crate::{global, ui::component};
+use crate::ui::component;
 
 pub fn spawn_pot(
     commands: &mut Commands,
@@ -27,16 +27,7 @@ pub fn spawn_pot(
         .spawn((
             component::DraggableButton,
             ui_image,
-            Node {
-                position_type: PositionType::Absolute,
-                bottom: Val::Px(global::TILE_UNIT as f32),
-                left: Val::Px(global::TILE_UNIT as f32),
-                width: Val::Px(global::TILE_UNIT as f32),
-                height: Val::Px(global::TILE_UNIT as f32),
-                justify_content: JustifyContent::Center,
-                align_items: AlignItems::Center,
-                ..default()
-            },
+            super::get_tile_node(0, 0, 1, 1), // Use x, y coordinates here (example: 0, 0)
         ))
         .id()
 }
